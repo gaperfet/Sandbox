@@ -1,10 +1,9 @@
 import multiprocessing
-
 # empty list with global scope 
 result = [] 
-
+#
 def square_list(mylist): 
-        global result  
+        global result  #Anche scrivendo globale i processi hanno propria memoria ,non modificano quella in main
         for num in mylist: 
                 result.append(num * num) 
         print("Result(in process p1): "+str(result)) 
@@ -21,5 +20,5 @@ if __name__=="__main__":
     p1.join() 
         
     # print global result list 
-    print("Result(in main program): "+str(result)) 
+    print("Result(in main program): "+str(result)) #in result del padre , la lista è rimasta vuota.
         
