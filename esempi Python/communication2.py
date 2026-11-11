@@ -2,9 +2,9 @@ import multiprocessing
 
 def square_list(mylist, result, square_sum): 
     for idx, num in enumerate(mylist): 
-        result[idx] = num * num 
+        result[idx] = num * num  #assegna all'elemento n° idx di result un valore
     # square_sum value 
-    square_sum.value = sum(result) 
+    square_sum.value = sum(result) #assegna il valore da una somma su result
     # print result Array 
     print("Result(in process p1): "+str(result[:])) 
     # print square_sum Value 
